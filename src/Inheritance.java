@@ -1,6 +1,5 @@
 // Java - 16
 // Lecture - Inheritance
-
 public class Inheritance {
     // In Java, it is possible to inherit attributes and methods from one class to another
     // we do that using the - extends keyword
