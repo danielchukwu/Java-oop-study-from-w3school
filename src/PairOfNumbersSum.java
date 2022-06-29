@@ -12,7 +12,6 @@ public class PairOfNumbersSum {
     static void pairFound(int [] col1, int [] col2){
         System.out.println(Arrays.toString(col1));
         System.out.println(Arrays.toString(col2));
-        System.out.println(Arrays.toString(col2));
 
         System.out.println("Hello world");
     }
