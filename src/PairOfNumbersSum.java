@@ -6,7 +6,6 @@
 // collection 1 : [1, 2, 3, 9] sum = 8
 // collection 2 : [1, 2, 4, 4] sum = 8
 
-import java.util.Arrays;
 import java.util.HashSet;
 
 public class PairOfNumbersSum {
@@ -61,7 +60,6 @@ public class PairOfNumbersSum {
         //        ^  ^
         while (fp < lp){
             if ((col[fp] + col[lp]) == goalSum){
-                System.out.println("Pair Found: " + col[fp] + "," + col[lp]);
                 return true;
             } else if ((col[fp] + col[lp]) < goalSum) {
                 fp++;
@@ -86,11 +84,14 @@ public class PairOfNumbersSum {
     // compliments = {}
 
     static boolean pairFound2(int [] col, int goalSum){
-        System.out.println(Arrays.toString(col));
         HashSet<Integer> compliments = new HashSet<Integer>();
         for (int num : col){
-            System.out.println(num);
-
+            if (compliments.contains(num)){
+                return true;
+            } else {
+                compliments.add(goalSum-num);
+                continue;
+            }
         }
         return false;
     }
@@ -101,10 +102,12 @@ public class PairOfNumbersSum {
         int goalSum = 8;
 
 //        Answer 1
-//        boolean pair_found = pairFound(collection2, goalSum);
-//        System.out.println("Pair Found: " + pair_found);
+        boolean pair_found = pairFound(collection2, goalSum);
+        System.out.println("Pair Found: " + pair_found);
 
 //        Answer 2
-        boolean pair_found2 = pairFound2()
+        boolean pair_found2 = pairFound2(collection2, goalSum);
+        System.out.println("Pair Found: " + pair_found2);
+
     }
 }
