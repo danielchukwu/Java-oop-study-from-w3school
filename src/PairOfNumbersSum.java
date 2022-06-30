@@ -49,9 +49,23 @@ public class PairOfNumbersSum {
         // System.out.println(Arrays.toString(col));
 
         int fp = 0;  // first pointer
-        int lp = col.length;  // last pointer
+        int lp = col.length - 1;  // last pointer
 
-
+        // How code will run: explained
+        // {1, 2, 4, 4} | sum = 8
+        //        ^  ^
+        while (fp < lp){
+            if ((col[fp] + col[lp]) == goalSum){
+                System.out.println("Pair Found: " + col[fp] + "," + col[lp]);
+                return true;
+            } else if ((col[fp] + col[lp]) < goalSum) {
+                fp++;
+                continue;
+            } else if ((col[fp] + col[lp]) > goalSum) {
+                lp--;
+                continue;
+            }
+        }
 
         return false;
     }
@@ -59,11 +73,11 @@ public class PairOfNumbersSum {
     public static void main(String [] args) {
         int [] collection1 = {1, 2, 3, 9};
         int [] collection2 = {1, 2, 4, 4};
-        System.out.println(collection2.length + "|" + collection1.length );
 
 
         int goalSum = 8;
 
-        pairFound(collection1, goalSum);
+        boolean pair_found = pairFound(collection2, goalSum);
+        System.out.println("Pair Found: " + pair_found);
     }
 }
