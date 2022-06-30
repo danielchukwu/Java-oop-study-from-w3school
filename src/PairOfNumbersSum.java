@@ -6,6 +6,9 @@
 // collection 1 : [1, 2, 3, 9] sum = 8
 // collection 2 : [1, 2, 4, 4] sum = 8
 
+import java.util.Arrays;
+import java.util.HashSet;
+
 public class PairOfNumbersSum {
     // These are my inputs and my outputs right
     // collection 1 : [1, 2, 3, 9] sum = 8
@@ -43,11 +46,13 @@ public class PairOfNumbersSum {
     // Interviewer: That is an absolutely amazing answer, how about we code that algorithm. What language would you like to use for this exercise i know for sure it's either js or python
     // Me: Well today I'll be using java
 
+    // Me: I was just thinking of how i would handle input parameter error to our algorithm. To Handle incorrect inputs to this algorithm. I am thinking of having a function
+    //     that takes both inputs ArrayList and integer and checks if they are the correct data type, if they are not we just return False. But since java requires you to
+    //     input the correct types and throws an error if you don't, I can simply use a try catch block
+    // Interviewer: I think that would be okay
 
 
     static boolean pairFound(int [] col, int goalSum){
-        // System.out.println(Arrays.toString(col));
-
         int fp = 0;  // first pointer
         int lp = col.length - 1;  // last pointer
 
@@ -70,14 +75,36 @@ public class PairOfNumbersSum {
         return false;
     }
 
+    // Interviewer: That was Good. I love that. So this Algorithm has an O(n) Linear Time Complexity,
+    //              What if the collection wasn't sorted. What would you do in such a case.
+
+    // ANSWER 3:
+    // Me: given that a list is unordered we could achieve linear time by iterating linearly and on every item we come across in the array, we want to check if that element is a compliment
+    //     to any item in our compliments set data structure, if it is there is a pair --> return True; else we add the compliment of that item to the comliments ds, and we move on to
+    //     the next item on the loop.
+    // {1, 2, 4, 4}
+    // compliments = {}
+
+    static boolean pairFound2(int [] col, int goalSum){
+        System.out.println(Arrays.toString(col));
+        HashSet<Integer> compliments = new HashSet<Integer>();
+        for (int num : col){
+            System.out.println(num);
+
+        }
+        return false;
+    }
     public static void main(String [] args) {
         int [] collection1 = {1, 2, 3, 9};
         int [] collection2 = {1, 2, 4, 4};
 
-
         int goalSum = 8;
 
-        boolean pair_found = pairFound(collection2, goalSum);
-        System.out.println("Pair Found: " + pair_found);
+//        Answer 1
+//        boolean pair_found = pairFound(collection2, goalSum);
+//        System.out.println("Pair Found: " + pair_found);
+
+//        Answer 2
+        boolean pair_found2 = pairFound2()
     }
 }
