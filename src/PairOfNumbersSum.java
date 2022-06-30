@@ -108,6 +108,18 @@ public class PairOfNumbersSum {
 //        Answer 2
         boolean pair_found2 = pairFound2(collection2, goalSum);
         System.out.println("Pair Found: " + pair_found2);
-
     }
+}
+
+
+class PE {
+    public int calculatePE(float m, float g, float h){
+        return Math.round(m*g*h);
+    }
+    public  static void main(String[] args){
+        PE calc = new PE();
+        int result = calc.calculatePE(2.3f, 3.2f, 5f);
+        System.out.println(result);
+    }
+
 }
