@@ -6,8 +6,6 @@
 // collection 1 : [1, 2, 3, 9] sum = 8
 // collection 2 : [1, 2, 4, 4] sum = 8
 
-import java.util.Arrays;
-
 public class PairOfNumbersSum {
     // These are my inputs and my outputs right
     // collection 1 : [1, 2, 3, 9] sum = 8
@@ -47,15 +45,23 @@ public class PairOfNumbersSum {
 
 
 
-    static void pairFound(int [] col1, int goalSum){
-        System.out.println(Arrays.toString(col1));
+    static boolean pairFound(int [] col, int goalSum){
+        // System.out.println(Arrays.toString(col));
 
-        System.out.println("Hello world");
+        int fp = 0;  // first pointer
+        int lp = col.length;  // last pointer
+
+
+
+        return false;
     }
 
     public static void main(String [] args) {
         int [] collection1 = {1, 2, 3, 9};
         int [] collection2 = {1, 2, 4, 4};
+        System.out.println(collection2.length + "|" + collection1.length );
+
+
         int goalSum = 8;
 
         pairFound(collection1, goalSum);
