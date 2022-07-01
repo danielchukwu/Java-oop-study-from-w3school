@@ -1,4 +1,5 @@
-package CMP202;
+package CMP202; // ignore this line, it shouldn't be added in your code
+
 // JAVA
 // Program - This is a java program that creates a method, a method that checks if a number is prime or not
 // What is a Prime Number though: A prime number is any number that can only be divided by one and itself without remainder e.g 2, 3, 5, 7, 11

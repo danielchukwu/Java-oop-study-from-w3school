@@ -1,4 +1,5 @@
-package CMP202;
+package CMP202; // ignore this line, it shouldn't be added in your code
+
 // JAVA
 // Program - This is a java program that creates a method, a method that prints the first 100 multiples of 3
 // For Example - 3 * 3 = 9, then 9 * 3 = 27, then 27 * 3 = 81, then keep multiplying by 3 for 100 times
