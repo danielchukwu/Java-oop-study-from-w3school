@@ -1,4 +1,5 @@
 package CMP202;   // ignore this line, it shouldn't be added in your code
+
 // JAVA
 // Program - This is a java program that creates a method, a method that checks if a number is even or odd
 public class CheckEvenOrOdd {
