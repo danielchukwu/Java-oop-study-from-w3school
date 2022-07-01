@@ -21,10 +21,16 @@ class Human {   // superclass
 }
 
 class Man extends Human { // subclass - inherits the variables and the functions walk() and jump()
+
+    public void walk(String name) {
+        super.name = name;
+        super.walk();
+    }
     public static void main(String [] args){
         Man man1 = new Man();
         man1.name = "nathan";
-        System.out.println(man1.name);
-        man1.walk();
+//        System.out.println(man1.name);
+//        man1.walk();
+        man1.walk("Daniel");
     }
 }

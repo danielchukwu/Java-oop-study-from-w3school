@@ -1,4 +1,4 @@
-package CMP202;
+package CMP202; // ignore this line, it shouldn't be added in your code
 
 // JAVA
 // Program - This is a java program that creates a method, a method that swaps two numbers and prints the result out
