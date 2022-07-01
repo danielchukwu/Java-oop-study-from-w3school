@@ -21,8 +21,6 @@ public class Answers {
     // What is an Exception?
     // - indicates issues that occur during runtime or compile time
 
-    // Note: You might get asked to differentiate between an error and an exception
-
     // Try and Catch?
     // - These are keywords that help handle exceptions due to data or coding errors during runtime
     // - A Try block is where the exception occurs
